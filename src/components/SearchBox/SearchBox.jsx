@@ -3,7 +3,7 @@ import css from "./SearchBox.module.css";
 import { useDispatch } from "react-redux";
 import { filter } from "../../redux/filtersSlice";
 
-export function SearchBox({ value }) {
+function SearchBox({ value }) {
   const dispatch = useDispatch();
   const handleChange = (event) => dispatch(filter(event.target.value.trim()));
   const inputId = useId();
@@ -16,8 +16,9 @@ export function SearchBox({ value }) {
         type="text"
         value={value}
         onChange={handleChange}
-        // onChange={(evt) => onChange(evt.target.value)}
       />
     </div>
   );
 }
+
+export default SearchBox;

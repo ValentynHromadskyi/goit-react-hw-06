@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 import { selectContacts, selectFilters } from "../../redux/selectors";
-import { Contact } from "../Contact/Contact";
+import Contact from "../Contact/Contact";
 import css from "./ContactList.module.css";
 
-export function ContactList() {
+function ContactList() {
   const contacts = useSelector(selectContacts);
   const filters = useSelector(selectFilters);
 
@@ -22,3 +22,5 @@ export function ContactList() {
       </ul>
     );
 }
+
+export default ContactList;

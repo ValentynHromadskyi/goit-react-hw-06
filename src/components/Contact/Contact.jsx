@@ -3,7 +3,7 @@ import { BsPersonCircle, BsTelephoneFill } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { remove } from "../../redux/contactsSlice";
 
-export function Contact({ contact: { id, name, number } }) {
+function Contact({ contact: { id, name, number } }) {
   const dispatch = useDispatch();
 
   {
@@ -24,3 +24,5 @@ export function Contact({ contact: { id, name, number } }) {
     );
   }
 }
+
+export default Contact;

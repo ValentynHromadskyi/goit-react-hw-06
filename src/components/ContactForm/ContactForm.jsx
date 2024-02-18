@@ -17,7 +17,7 @@ const contactSchema = Yup.object().shape({
     .required("This is a required field"),
 });
 
-export function ContactForm() {
+function ContactForm() {
   const dispatch = useDispatch();
   const nameId = useId();
   const numberId = useId();
@@ -73,3 +73,5 @@ export function ContactForm() {
     </>
   );
 }
+
+export default ContactForm;
